@@ -1,0 +1,1 @@
+Dùng K - Mean phân loại các ngân hang vào nhiều nhóm

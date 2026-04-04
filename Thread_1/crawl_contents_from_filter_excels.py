@@ -11,8 +11,12 @@ from urllib.parse import urlparse
 import pandas as pd
 import requests
 
-
 PROJECT_ROOT = Path(__file__).resolve().parent
+
+# --- CẤU HÌNH NĂM VÀ NGÂN HÀNG CẦN XỬ LÝ ---
+TARGET_YEAR = "2023"
+TARGET_BANK = "Vietcombank"  # Đổi thành "vietcombank", "bidv", v.v. hoặc "*" nếu muốn chạy tất cả ngân hàng trong năm
+# ------------------------------------------
 
 try:
 	import trafilatura
@@ -168,8 +172,8 @@ def main(argv: list[str] | None = None) -> int:
 	)
 	parser.add_argument(
 		"--data-root",
-		default="data",
-		help="Root folder that contains YEAR/BANK folders (e.g. data/2023 or just data).",
+		default=f"data/{TARGET_YEAR}",
+		help=f"Root folder that contains YEAR/BANK folders (default: data/{TARGET_YEAR}).",
 	)
 	parser.add_argument(
 		"--stage-in",
@@ -184,7 +188,7 @@ def main(argv: list[str] | None = None) -> int:
 	parser.add_argument(
 		"--glob",
 		default="**/bronze/**/*_filter.xlsx",
-		help="Glob pattern under data-root (default searches only bronze/*_filter.xlsx).",
+		help="Glob pattern under data-root. By default, it uses TARGET_BANK and stage_in configuration.",
 	)
 	parser.add_argument("--timeout", type=int, default=25, help="HTTP timeout seconds.")
 	parser.add_argument("--sleep", type=float, default=1.0, help="Sleep seconds between URLs.")
@@ -199,9 +203,10 @@ def main(argv: list[str] | None = None) -> int:
 	)
 	args = parser.parse_args(argv)
 
-	# If user changes stage-in but doesn't override --glob, adapt the default pattern.
-	if args.glob == "**/bronze/**/*_filter.xlsx" and str(args.stage_in) != "bronze":
-		args.glob = f"**/{args.stage_in}/**/*_filter.xlsx"
+	# Tương thích với TARGET_BANK và tuỳ chỉnh stage_in
+	if args.glob == "**/bronze/**/*_filter.xlsx":
+		bank_path = "**" if TARGET_BANK == "*" else TARGET_BANK
+		args.glob = f"{bank_path}/{args.stage_in}/**/*_filter.xlsx"
 
 	_ensure_deps()
 

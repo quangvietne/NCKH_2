@@ -1,0 +1,24 @@
+# Core Data Science & Math
+pandas
+numpy
+scipy
+scikit-learn
+
+# Data Visualization
+matplotlib
+
+# Natural Language Processing (NLP)
+underthesea
+
+# Web Scraping & API (Dành cho phần crawl báo chí)
+requests
+beautifulsoup4
+
+# File Processing (Đọc/Ghi Excel, trích xuất PDF)
+openpyxl
+pdfplumber
+PyPDF2
+
+# Thư viện để chạy Jupyter Notebook
+jupyter
+ipykernel

@@ -1,0 +1,24 @@
+Ý NGHĨA CỦA VIỆC SO SÁNH TRỰC TIẾP GSI GIỮA 2 NGÂN HÀNG (A VÀ B)
+
+Mặc dù không thể dùng GSI để chốt tội "Tẩy xanh" (Greenwashing), nhưng việc đem mức điểm GSI của Ngân hàng A và Ngân hàng B ra so sánh mang lại **3 Ý nghĩa cốt lõi trong Phân loại Chiến lược Truyền thông Nội bộ**.
+
+Khi GSI(A) > GSI(B), nó chứa đựng những thông điệp kinh doanh sau:
+
+### 1. Ý nghĩa về "Chiến lược Định vị Hình ảnh" (Marketing Positioning)
+Cùng là báo cáo hằng năm, việc A có GSI cao hơn B chứng tỏ Ban lãnh đạo của A chỉ đạo đặt trọng tâm từ vựng cực kỳ mạnh vào vấn đề ESG. 
+* A đang muốn định vị hình ảnh trên thị trường là một "Người tiên phong xanh", họ dùng mỹ từ nhiều hơn, rải đặc các keyword ESG để lôi kéo các Quỹ đầu tư nước ngoài (vốn rất khoái đọc các báo cáo có mật độ ESG cao).
+* Ngược lại, B (GSI thấp) chọn chiến lược khiêm tốn hoặc cổ điển, chú trọng viết về Nợ xấu, Tín dụng cốt lõi hơn là theo trend ESG.
+
+### 2. Ý nghĩa về "Mức độ Ám ảnh" (Institutional Obsession) với phong trào ESG
+Nhờ thuật toán TF-IDF không đếm "tùy tiện", GSI cao của A tiết lộ rằng: Văn hóa nội bộ của A đang bị "ám ảnh" hoặc đặt nặng bởi các tiêu chuẩn Môi trường/Xã hội/Quản trị.
+* Văn bản của A không chỉ nhắc đến vài từ rời rạc, mà tần suất (TF) phải vượt quá mức kỳ vọng (IDF) của một văn bản bình thường. Điểm GSI lật tẩy được mức độ "ám ảnh" này.
+
+### 3. Ý nghĩa về "Độ nghiêng của Kiềng 3 chân E-S-G" (Thematic Imbalance)
+Khi so sánh, ta không chỉ nhìn GSI tổng, mà soi vào thành phần E, S, G_tfidf tạo nên GSI đó:
+* Ví dụ: GSI của A (0.015) > B (0.010). Nhưng đào sâu thì thấy A ăn điểm hoàn toàn nhờ cục E (Môi trường) bùng nổ, trong khi B rải điểm đều cho E, S và G.
+* => So sánh này cực kỳ có ý nghĩa để bóc tách xem: A đang cố đánh bóng mảng Môi trường (có thể để bù đắp cho Xã hội yếu kém), còn B phát triển hài hòa hơn, đi chậm mà chắc trên cả 3 chân kiềng.
+
+---
+TÓM LẠI:
+So sánh trực tiếp GSI giữa A và B **CÓ Ý NGHĨA RẤT LỚN BIẾT ĐƯỢC AI ĐANG "LA TO HƠN" VÀ "LA LỆCH VỀ HƯỚNG NÀO" TỪ BÊN TRONG BÁO CÁO CỦA HỌ.** 
+Nó giống như việc mở 2 cuốn sách ra và thấy ngân hàng A rợp màu xanh lá cây chói lóa, còn B thì vẫn là màu đen trắng khô khan. Còn việc màu xanh lá đó của A là "thật" hay "tẩy" (ảo), thì bạn mới cần phải mời anh nhà báo (Delta Gap) vào đối chất. 

@@ -1,0 +1,45 @@
+File `sentiment_comparative_scoring.ipynb` là "trái tim" của hệ thống đo lường mức độ Tẩy xanh (Greenwashing). Nơi đây làm nhiệm vụ lượng hóa (biến chữ thành điểm số) dựa trên phương pháp luận Tỷ trọng Greenwashing (GSI - Greenwashing Severity Index).
+
+Dưới đây là tổng hợp cơ chế hoạt động của thuật toán chấm điểm trong file:
+
+### 1. Khởi tạo và Đồng bộ Bộ từ điển (`ESG.xlsx`)
+* File load danh sách các từ khóa ESG đã được chuyên gia đánh giá và gán trọng số (Weight) từ mức -3 (Tẩy xanh/Tiêu cực) đến +3 (Thực chất/Tích cực).
+* **Điểm tinh tế:** Hàm `preprocess_dict_term` tái sử dụng chính thuật toán tách từ `pyvi` ở file Gold trước đó để xử lý các từ trong từ điển (Ví dụ: "thân thiện môi trường" -> "thân_thiện môi_trường"). Điều này đảm bảo khi đem đi so sánh, từ khóa trong từ điển và từ khóa trong văn bản sẽ **khớp nhau tuyệt đối 100%**.
+
+### 2. Thuật toán Tính điểm (Hàm `calculate_scores`)
+Với mỗi đoạn văn bản (đã được tiền xử lý ở khâu Gold), hệ thống thực hiện 2 phép tính dựa trên 2 công thức toán học cơ bản:
+
+#### A. Công thức tính Điểm Tổng (Total Score)
+Điểm tổng đại diện cho tổng giá trị cảm xúc ESG của toàn bộ bài viết. Nó được tính bằng tổng của tần suất xuất hiện nhân với trọng số của từng từ khóa (lấy từ file Excel).
+
+> **Công thức:** Total Score = Σ (F_i × W_i)
+
+Trong đó:
+* F_i (Frequency): Số lần từ khóa thứ i được nhắc đến trong đoạn văn bản.
+* W_i (Weight): Trọng số điểm chuyên gia đã gán cho từ khóa đó (chạy từ -3 đến +3).
+
+*Ví dụ:* Bài báo có từ "ô nhiễm" (W = -2) xuất hiện 3 lần (F = 3), và từ "năng lượng tái tạo" (W = +3) xuất hiện 1 lần (F = 1).
+Total Score = (3 × -2) + (1 × +3) = -3
+
+#### B. Công thức chuẩn hóa Điểm Tương Đối (Comparative Score)
+Vì một Báo cáo thường niên (PDF) có thể dài 10.000 từ, trong khi một bản tin báo chí chỉ dài 400 từ, nếu so sánh trực tiếp Total Score sẽ hoàn toàn khập khiễng. Do đó, code thực hiện phép chuẩn hóa (Normalization) bằng cách chia điểm tổng cho kích thước của văn bản:
+
+> **Công thức:** Comparative Score = Total Score / Total Tokens
+
+Trong đó:
+* Total Tokens: Tổng số lượng cụm từ có trong toàn bộ văn bản (được đếm bằng lệnh `len(text.split())` sau khi đã gom từ bằng thư viện `pyvi`).
+
+*Ý nghĩa:* Trả về "Mật độ/Trọng số cảm xúc ESG tính trên mỗi chữ" của văn bản. Nhờ công thức này, bài Báo cáo khổng lồ và bài Tin tức mạng nhỏ bé mới có thể được đặt lên cùng một hệ quy chiếu (cùng scale) để so sánh xem bên nào đang "nói quá lên" (Greenwashing) ở trong Thread 2.
+
+### 3. Luồng Xử lý "Kép" (Dual Pipeline)
+File này mang một nhiệm vụ đặc biệt là thực hiện chấm điểm song song cho 2 nguồn dữ liệu hoàn toàn khác nhau để đưa về chung vạch đích:
+
+* **Luồng 1 - Tin tức báo chí:** Quét toàn bộ file `preprocessed_*.json` lấy từ thư mục `gold/`, chấm điểm tất cả bài báo, sau đó lưu kết quả vào thư mục `scoring/scored_...json`.
+* **Luồng 2 - Báo cáo thường niên/ESG (Định dạng PDF):**
+  1. Dùng thư viện `pdfplumber` bóc tách từng chữ (Extract text) trong file PDF báo cáo gốc.
+  2. Lưu bản nháp xuất ra thành file `.txt` ở folder `extracted_texts` (để con người có thể đối chiếu chéo xem tool cắt chữ có bị lỗi font không).
+  3. Chạy thuật toán tiền xử lý riêng cho văn bản này và đưa vào hàm `calculate_scores` y hệt như luồng báo chí.
+  4. Trả kết quả điểm số cũng vào chung thư mục `scoring/`.
+
+### Tổng kết Output
+Kết quả cuối cùng của Thread 1 (sau khi qua file này) là folder `scoring/`. Tại đây, bạn sẽ có các mảnh ghép điểm số Comparative Score hoàn chỉnh của cả "Lời ngân hàng nói" (Báo cáo) và "Lời truyền thông nói" (Tin tức). Dữ liệu này sẵn sàng để đưa sang Thread 2 tính toán khoảng cách (Gap).

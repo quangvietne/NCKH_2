@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "Vietcombank_2023_ESG_raw.txt",
+    "Total Characters": 54491,
+    "Total Tokens": 10094,
+    "Date Calculated": "2026-04-04 23:56:50"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.016438432030585017,
+    "S_tfidf": 0.0034209076712281143,
+    "G_tfidf": 0.006779487861063511
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.008879609187625547,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 23,
+    "E Keywords": 14,
+    "S Keywords": 5,
+    "G Keywords": 6
+  }
+}

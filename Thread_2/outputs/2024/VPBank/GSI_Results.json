@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "VPBank_2024_ESG_raw.txt",
+    "Total Characters": 231207,
+    "Total Tokens": 43982,
+    "Date Calculated": "2026-04-05 02:00:17"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.01955785619332957,
+    "S_tfidf": 0.00708724054737579,
+    "G_tfidf": 0.019492832199965584
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.015379309646890315,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 72,
+    "E Keywords": 29,
+    "S Keywords": 22,
+    "G Keywords": 25
+  }
+}

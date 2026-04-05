@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "Agribank_2023_ESG_raw.txt",
+    "Total Characters": 57639,
+    "Total Tokens": 10879,
+    "Date Calculated": "2026-04-05 00:27:15"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.020278935604712986,
+    "S_tfidf": 0.005498949274566689,
+    "G_tfidf": 0.018529331995771493
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.014769072291683722,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 33,
+    "E Keywords": 13,
+    "S Keywords": 6,
+    "G Keywords": 15
+  }
+}

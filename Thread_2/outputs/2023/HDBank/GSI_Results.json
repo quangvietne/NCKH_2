@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "HDBank_2023_ESG_raw.txt",
+    "Total Characters": 388099,
+    "Total Tokens": 72577,
+    "Date Calculated": "2026-04-05 10:54:49"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.011537027444552794,
+    "S_tfidf": 0.0035083610267507338,
+    "G_tfidf": 0.01039550641375439
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.008480298295019305,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 70,
+    "E Keywords": 34,
+    "S Keywords": 20,
+    "G Keywords": 22
+  }
+}

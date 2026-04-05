@@ -1,0 +1,68 @@
+{
+    "reports": [
+        {
+            "report_name": "VietAbank_2024_ESG.pdf",
+            "text_file_path": "D:\\NCKH\\ESG_reporting\\extracted_texts\\VietAbank_2024_ESG_raw.txt",
+            "total_tokens": 494,
+            "total_score": 19,
+            "comparative_score": 0.038461538461538464,
+            "esg_matched_terms": {
+                "thân_thiện với môi_trường": {
+                    "frequency": 1,
+                    "weight": -1,
+                    "subtotal": -1
+                },
+                "xanh": {
+                    "frequency": 1,
+                    "weight": -1,
+                    "subtotal": -1
+                },
+                "bền_vững": {
+                    "frequency": 7,
+                    "weight": 1,
+                    "subtotal": 7
+                },
+                "đạo_đức": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "trách_nhiệm": {
+                    "frequency": 2,
+                    "weight": 1,
+                    "subtotal": 2
+                },
+                "công_bằng": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "duy_trì": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "minh_bạch": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "đảm_bảo": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "hợp_pháp": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "cộng_đồng": {
+                    "frequency": 3,
+                    "weight": 1,
+                    "subtotal": 3
+                }
+            }
+        }
+    ]
+}

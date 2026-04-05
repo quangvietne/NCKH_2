@@ -14,8 +14,8 @@ import requests
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 # --- CẤU HÌNH NĂM VÀ NGÂN HÀNG CẦN XỬ LÝ ---
-TARGET_YEAR = "2023"
-TARGET_BANK = "Vietcombank"  # Đổi thành "vietcombank", "bidv", v.v. hoặc "*" nếu muốn chạy tất cả ngân hàng trong năm
+TARGET_YEAR = "2024"
+TARGET_BANK = "PVcomBank"  # Đổi thành "vietcombank", "bidv", v.v. hoặc "*" nếu muốn chạy tất cả ngân hàng trong năm
 # ------------------------------------------
 
 try:

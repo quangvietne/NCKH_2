@@ -1,0 +1,223 @@
+{
+    "reports": [
+        {
+            "report_name": "ACB_2023_ESG.pdf",
+            "text_file_path": "E:\\NCKH_2-master\\ESG_reporting\\extracted_texts\\ACB_2023_ESG_raw.txt",
+            "total_tokens": 23263,
+            "total_score": 635,
+            "comparative_score": 0.027296565361303357,
+            "esg_matched_terms": {
+                "thân_thiện với môi_trường": {
+                    "frequency": 3,
+                    "weight": -1,
+                    "subtotal": -3
+                },
+                "xanh": {
+                    "frequency": 20,
+                    "weight": -1,
+                    "subtotal": -20
+                },
+                "tái_tạo": {
+                    "frequency": 7,
+                    "weight": 3,
+                    "subtotal": 21
+                },
+                "có trách_nhiệm": {
+                    "frequency": 11,
+                    "weight": 1,
+                    "subtotal": 11
+                },
+                "bền_vững": {
+                    "frequency": 220,
+                    "weight": 1,
+                    "subtotal": 220
+                },
+                "đạo_đức": {
+                    "frequency": 12,
+                    "weight": 1,
+                    "subtotal": 12
+                },
+                "trách_nhiệm": {
+                    "frequency": 65,
+                    "weight": 1,
+                    "subtotal": 65
+                },
+                "công_bằng": {
+                    "frequency": 12,
+                    "weight": 1,
+                    "subtotal": 12
+                },
+                "chính_trực": {
+                    "frequency": 2,
+                    "weight": 1,
+                    "subtotal": 2
+                },
+                "bình_đẳng": {
+                    "frequency": 12,
+                    "weight": 1,
+                    "subtotal": 12
+                },
+                "sinh_học": {
+                    "frequency": 1,
+                    "weight": -1,
+                    "subtotal": -1
+                },
+                "tự_nhiên": {
+                    "frequency": 5,
+                    "weight": -1,
+                    "subtotal": -5
+                },
+                "ý_thức bảo_vệ môi_trường": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "hệ sinh_thái": {
+                    "frequency": 2,
+                    "weight": 1,
+                    "subtotal": 2
+                },
+                "sinh_thái": {
+                    "frequency": 2,
+                    "weight": -1,
+                    "subtotal": -2
+                },
+                "ô_nhiễm": {
+                    "frequency": 3,
+                    "weight": -3,
+                    "subtotal": -9
+                },
+                "một_cách bền_vững": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "duy_trì": {
+                    "frequency": 8,
+                    "weight": 1,
+                    "subtotal": 8
+                },
+                "minh_bạch": {
+                    "frequency": 28,
+                    "weight": 2,
+                    "subtotal": 56
+                },
+                "có_thể kiểm_chứng": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "gây tranh_cãi": {
+                    "frequency": 1,
+                    "weight": -2,
+                    "subtotal": -2
+                },
+                "chính_xác": {
+                    "frequency": 3,
+                    "weight": 2,
+                    "subtotal": 6
+                },
+                "bảo_đảm": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "đảm_bảo": {
+                    "frequency": 101,
+                    "weight": 2,
+                    "subtotal": 202
+                },
+                "tuân_thủ pháp_luật": {
+                    "frequency": 4,
+                    "weight": 2,
+                    "subtotal": 8
+                },
+                "vi_phạm_pháp_luật": {
+                    "frequency": 2,
+                    "weight": -3,
+                    "subtotal": -6
+                },
+                "niềm tin": {
+                    "frequency": 5,
+                    "weight": 1,
+                    "subtotal": 5
+                },
+                "tái_chế": {
+                    "frequency": 14,
+                    "weight": 2,
+                    "subtotal": 28
+                },
+                "năng_lượng tái_tạo": {
+                    "frequency": 2,
+                    "weight": 3,
+                    "subtotal": 6
+                },
+                "năng_lượng sạch": {
+                    "frequency": 3,
+                    "weight": -1,
+                    "subtotal": -3
+                },
+                "tiết_kiệm năng_lượng": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "bảo_vệ động_vật hoang_dã": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "giảm_thiểu": {
+                    "frequency": 15,
+                    "weight": 1,
+                    "subtotal": 15
+                },
+                "công_trình xanh": {
+                    "frequency": 1,
+                    "weight": -1,
+                    "subtotal": -1
+                },
+                "tài_chính bền_vững": {
+                    "frequency": 7,
+                    "weight": 1,
+                    "subtotal": 7
+                },
+                "vật_liệu tái_chế": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "độc_hại": {
+                    "frequency": 2,
+                    "weight": -3,
+                    "subtotal": -6
+                },
+                "gian_lận": {
+                    "frequency": 3,
+                    "weight": -3,
+                    "subtotal": -9
+                },
+                "cộng_đồng": {
+                    "frequency": 34,
+                    "weight": 1,
+                    "subtotal": 34
+                },
+                "lỗi": {
+                    "frequency": 1,
+                    "weight": -2,
+                    "subtotal": -2
+                },
+                "sai_sót": {
+                    "frequency": 4,
+                    "weight": -2,
+                    "subtotal": -8
+                },
+                "vi_phạm": {
+                    "frequency": 10,
+                    "weight": -3,
+                    "subtotal": -30
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "PVcomBank_2024_ESG_raw.txt",
+    "Total Characters": 19335,
+    "Total Tokens": 3702,
+    "Date Calculated": "2026-04-05 09:00:50"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.016159662117236902,
+    "S_tfidf": 0.0015911026584545704,
+    "G_tfidf": 0.010576011007431633
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.009442258594374368,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 11,
+    "E Keywords": 6,
+    "S Keywords": 1,
+    "G Keywords": 5
+  }
+}

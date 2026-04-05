@@ -1,0 +1,17 @@
+File gold_text_preprocessing.ipynb đóng vai trò là "màng lọc cuối cùng" (lớp Gold) trong quy trình xử lý dữ liệu. Sau khi các bài báo đã được lọc loại bỏ trùng lặp và xác nhận có chứa nội dung ESG (ở lớp Silver), file này sẽ thực hiện Chuẩn hóa và Tiền xử lý văn bản tiếng Việt (NLP Preprocessing) để chuẩn bị dữ liệu sạch nhất cho bước chấm điểm (Scoring) cuối cùng.
+
+Dưới đây là các cơ chế cốt lõi của file này:
+
+1. Thuật toán Tiền xử lý (Xử lý ngôn ngữ tự nhiên - NLP)
+Quy trình này bám sát vào các bước tiêu chuẩn cho bài bài toán NLP, bao gồm 4 bước chính trong hàm preprocess_vietnamese_text:
+
+Lowercasing (Viết thường): Chuyển toàn bộ văn bản về chữ in thường để đồng nhất dữ liệu (ví dụ: "Ngân Hàng" và "ngân hàng" sẽ được hiểu là một).
+Punctuation Normalization (Xóa dấu câu): Dùng Regex re.sub(r'[^\w\s]', ' ', text) để loại bỏ toàn bộ các ký tự đặc biệt, dấu chấm, phẩy,... chỉ giữ lại chữ cái và khoảng trắng.
+Word Segmentation (Tách từ tiếng Việt): Tiếng Việt là ngôn ngữ đơn lập, một từ có thể gồm 2-3 âm tiết. File sử dụng thư viện pyvi (Python Vietnamese) để gom các từ lại với nhau bằng dấu gạch ngang (Ví dụ: ngân hàng ABC -> ngân_hàng ABC). Việc này giúp máy tính hiểu cụm "ngân hàng" là một thực thể duy nhất chứ không phải hai từ rời rạc "ngân" và "hàng".
+Stopwords Removal (Loại bỏ từ dừng): Tải tự động một bộ từ điển tiếng Việt (khoảng 2000 từ) từ Github (những từ ngữ pháp không mang hàm ý ngữ nghĩa như "và", "là", "của", "thì", "mà",...). Đoạn code sẽ loại bỏ các từ này ra khỏi văn bản để giảm nhiễu cục bộ cho mô hình chấm điểm về sau.
+2. Luồng xử lý Dữ liệu (Pipeline Input/Output)
+Đầu vào (Input): Đọc các file JSON chứa danh sách bài báo đã được lọc sạch từ thư mục silver/3.
+Quy trình quét: File sẽ lặp qua từng bài báo, lấy phần nội dung ở trường content và đưa qua hàm tiền xử lý ở trên.
+Bảo toàn dữ liệu cũ: Thay vì ghi đè làm mất văn bản gốc, code tinh tế tạo ra một trường dữ liệu (key) mới tên là preprocessed_content để chứa đoạn văn bản đã hóa sẹo (đã tách từ và xóa dấu).
+Đầu ra (Output): Các file phân tích xong sẽ được lưu vào thư mục gold/ với tên file được thêm tiền tố preprocessed_ (ví dụ: preprocessed_vietinbank_data.json).
+Sau khi chạy xong file này, dữ liệu đã ở trạng thái tối ưu (chỉ còn lại các "từ khóa" mang ý nghĩa thực sự định hình nên câu) sẵn sàng để máy tính đọc và hiểu trong Notebook Scoring tiếp theo.

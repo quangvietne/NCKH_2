@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "Techcombank_2023_ESG_raw.txt",
+    "Total Characters": 128162,
+    "Total Tokens": 23864,
+    "Date Calculated": "2026-04-05 05:20:34"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.010123704314470449,
+    "S_tfidf": 0.002806815392435189,
+    "G_tfidf": 0.017900547783185176
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.010277022496696937,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 48,
+    "E Keywords": 23,
+    "S Keywords": 8,
+    "G Keywords": 22
+  }
+}

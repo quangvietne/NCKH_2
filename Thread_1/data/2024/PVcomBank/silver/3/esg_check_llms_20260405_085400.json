@@ -1,0 +1,11 @@
+{
+  "bank": "PVcomBank",
+  "year": "2024",
+  "generated_at": "2026-04-05T08:54:00",
+  "model": "openai/gpt-4o-mini",
+  "dictionary": "d:\\NCKH\\ESG_Dictionary\\ESG.xlsx",
+  "definition": "d:\\NCKH\\Thread_1\\Definition_ESG.txt",
+  "stage_in": "silver/2",
+  "stage_out": "silver/3",
+  "items": []
+}

@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "ACB_2024_ESG_raw.txt",
+    "Total Characters": 271812,
+    "Total Tokens": 53951,
+    "Date Calculated": "2026-04-05 06:51:47"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.014875157881352212,
+    "S_tfidf": 0.002250345124230294,
+    "G_tfidf": 0.010373849705557955
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.009166450903713487,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 67,
+    "E Keywords": 34,
+    "S Keywords": 14,
+    "G Keywords": 22
+  }
+}

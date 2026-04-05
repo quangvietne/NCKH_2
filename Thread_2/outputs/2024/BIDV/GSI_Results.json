@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "BIDV_2024_ESG_raw.txt",
+    "Total Characters": 247806,
+    "Total Tokens": 47837,
+    "Date Calculated": "2026-04-04 23:14:52"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.019219094877884535,
+    "S_tfidf": 0.0059425707267598705,
+    "G_tfidf": 0.014700301100152517
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.013287322234932307,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 58,
+    "E Keywords": 25,
+    "S Keywords": 20,
+    "G Keywords": 18
+  }
+}

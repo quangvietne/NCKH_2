@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "TPBank_2024_ESG_raw.txt",
+    "Total Characters": 245167,
+    "Total Tokens": 46487,
+    "Date Calculated": "2026-04-05 04:52:58"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.016239229163591173,
+    "S_tfidf": 0.006827073504355922,
+    "G_tfidf": 0.01312118608310094
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.012062496250349344,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 73,
+    "E Keywords": 32,
+    "S Keywords": 23,
+    "G Keywords": 24
+  }
+}

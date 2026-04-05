@@ -1,0 +1,10 @@
+﻿Metric,Value
+E (Environment) TF-IDF Score,0.018583
+S (Social) TF-IDF Score,0.004685
+G (Governance) TF-IDF Score,0.017899
+GSI (Greenwashing Severity Index),0.013722
+Total Tokens Analyzed,49004
+Total Keywords Found,77
+Total E Keywords Found,34
+Total S Keywords Found,26
+Total G Keywords Found,22

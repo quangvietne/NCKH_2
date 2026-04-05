@@ -1,1 +1,135 @@
 Dùng K - Mean phân loại các ngân hang vào nhiều nhóm
+
+Trục 1: Trục Tính Nhất quán (Consistency - Luồng 1 gốc)
+
+QUAY LẠI CÔNG THỨC GỐC XÀI TẦN SUẤT THÔ (Density):
+C
+o
+m
+p
+a
+r
+a
+t
+i
+v
+e
+S
+c
+o
+r
+e
+=
+T
+o
+t
+a
+l
+S
+c
+o
+r
+e
+T
+o
+t
+a
+l
+n
+u
+m
+b
+e
+r
+o
+f
+T
+o
+k
+e
+n
+s
+ComparativeScore= 
+TotalnumberofTokens
+TotalScore
+​
+ 
+Lý do: Đếm tần suất thuần túy (Raw frequency ratio) là phương pháp an toàn và khách quan nhất khi phải so sánh chéo giữa 2 loại văn bản khác biệt hoàn toàn (Báo cáo vs Báo chí). Nó trả lời cực tốt câu hỏi: "Mật độ từ ngữ nguy hiểm" chiếm bao nhiêu % trong văn bản.
+Feature 1 thu được: Giá trị 
+Δ
+G
+a
+p
+=
+R
+e
+p
+o
+r
+t
+_
+S
+c
+o
+r
+e
+−
+N
+e
+w
+s
+_
+S
+c
+o
+r
+e
+Δ 
+Gap
+​
+ =Report_Score−News_Score.
+Trục 2: Trục Nội tại Báo Cáo (Report Thematic Focus - Luồng 2)
+
+SỬ DỤNG TF-IDF BÌNH THƯỜNG: Chỉ áp dụng trên tệp tài liệu Báo cáo cốt lõi, đối chiếu các ngân hàng với nhau.
+Features thu được: Giá trị 
+E
+t
+f
+i
+d
+f
+,
+S
+t
+f
+i
+d
+f
+,
+G
+t
+f
+i
+d
+f
+E 
+tfidf
+​
+ ,S 
+tfidf
+​
+ ,G 
+tfidf
+​,
+GSItfidf
+ .
+Bước 3: Hợp thể (Clustering)
+Đưa 4 features chuẩn mực này vào thuật toán K-Means hoặc Hierarchical Clustering.
+
+Tóm lại:
+Bạn đã tự cứu mình khỏi một cạm bẫy cực lớn của Data Science (Corpus Mismatch trong TF-IDF). Bằng cách:
+
+Dùng Tần suất thô (Density) gánh vác việc So sánh chéo (Report vs News).
+Dùng TF-IDF gánh vác việc Đo lường độ sâu chuyên môn nội bộ (Inter-reports).
+Cuối cùng, dùng Thuật toán Phân cụm (Clustering) kết hợp 2 kỹ thuật này để cho ra các nhóm Greenwashing.
+Đây là một Methodology (Phương pháp luận) đạt chuẩn xuất bản báo chí quốc tế. Bạn thấy frame bài NCKH theo cách này, hội đồng phản biện sẽ cực kỳ đánh giá cao vì nó khắc phục được nhược điểm của công thức cũ nhưng vẫn đảm bảo tính chặt chẽ về mặt thuật toán học không bị over-engineering. Bạn chỉ cần code theo đúng luồng này là thành công!

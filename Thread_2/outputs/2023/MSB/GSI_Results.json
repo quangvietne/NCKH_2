@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "MSB_2023_ESG_raw.txt",
+    "Total Characters": 118177,
+    "Total Tokens": 22591,
+    "Date Calculated": "2026-04-05 07:51:27"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.015390908402853454,
+    "S_tfidf": 0.0040721171544407225,
+    "G_tfidf": 0.01685126206493126
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.01210476254074181,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 43,
+    "E Keywords": 19,
+    "S Keywords": 10,
+    "G Keywords": 18
+  }
+}

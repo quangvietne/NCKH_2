@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "VietAbank_2024_ESG_raw.txt",
+    "Total Characters": 3574,
+    "Total Tokens": 676,
+    "Date Calculated": "2026-04-05 05:30:27"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.032454419724796776,
+    "S_tfidf": 0.008713405386980502,
+    "G_tfidf": 0.017426810773961004
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.019531545295246092,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 4,
+    "E Keywords": 2,
+    "S Keywords": 1,
+    "G Keywords": 2
+  }
+}

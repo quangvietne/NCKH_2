@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "OCB_2023_ESG_raw.txt",
+    "Total Characters": 285103,
+    "Total Tokens": 53803,
+    "Date Calculated": "2026-04-05 08:27:16"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.01458315013188698,
+    "S_tfidf": 0.0037691771112759514,
+    "G_tfidf": 0.011728768298819643
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.010027031847327523,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 67,
+    "E Keywords": 24,
+    "S Keywords": 19,
+    "G Keywords": 28
+  }
+}

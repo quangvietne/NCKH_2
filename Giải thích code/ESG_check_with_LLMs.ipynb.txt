@@ -1,0 +1,19 @@
+File ESG_check_with_LLMs.ipynb đúng như tên gọi của nó, làm nhiệm vụ "Bảo vệ cổng" cuối cùng. Nó quyết định một bài báo trên báo chí có thực sự nói về chủ đề Phát triển Bền vững (ESG) hay không, trước khi chúng ta chấm điểm thái độ của bài báo đó.
+
+Cách lọc bỏ các bài báo không liên quan diễn ra qua mô hình Phễu Lọc 2 Tầng (2-Tier Pipeline):
+
+Tầng 1 (Tier A): Lọc nhanh bằng Từ điển (Keyword Heuristics)
+Tầng này dùng tốc độ máy tính để lọc thô, loại bỏ ngay những bài báo sai chủ đề một cách rõ ràng.
+
+Cách làm: Code tải bộ từ vựng ESG từ file excel ESG.xlsx. Sau đó, nó tạo ra các cụm Regex (biểu thức chính quy) để tìm kiếm. Hàm tier_a_find_hits() sẽ quét nguyên văn từ trên xuống dưới nội dung bài báo.
+Tiêu chí loại bỏ: Nếu hàm quét toàn bộ bài báo mà KHÔNG tìm thấy bất kỳ một từ khóa nào nằm trong từ điển ESG (Ví dụ: Từ điển có chữ "tín dụng xanh", "phát thải", "net zero" nhưng bài lại chỉ nói về "mở thẻ ATM mới", "lãi suất tiết kiệm"), nó sẽ NGAY LẬP TỨC bỏ qua bài báo đó và in ra log -> Tier A: no keyword hits (skip).
+Tầng 2 (Tier B): Chống "Dương tính giả" bằng Trí tuệ Nhân tạo (LLM - GPT-4o-mini)
+Đôi khi bài báo có nhắc đến từ khóa ESG (VD có chữ "môi trường"), nhưng thực chất ngữ cảnh lại lướt qua cực kì chung chung ("ngân hàng tạo môi trường làm việc tốt", "dòng tiền thân thiện"). Lúc này ta cần LLM đọc hiểu ngữ nghĩa để đưa ra kết luận thật.
+
+Cách làm: Hàm extract_context_sentences() sẽ thông minh bóc tách đúng những câu (khoảng 8 câu xung quanh) chứa các từ khóa ESG đã tìm thấy ở Tầng 1. Nó gói đoạn trích này cùng Tiêu đề bài báo gửi lên API của con AI (qua prompt build_esg_prompt()).
+Trong nội dung gửi cho con AI, chúng ta đã cài cắm "Luật chơi" ép AI đọc file Definition_ESG.txt. AI có nhiệm vụ đóng vai một chuyên gia phân loại.
+Tiêu chí loại bỏ ở Tầng 2 (AI đưa ra phán quyết):
+Nếu AI trả về kết quả is_esg = False hoặc không thể trích dẫn được lý do (context_esg rỗng) -> Bỏ qua bài báo đó.
+Hoặc nếu AI trả về là ESG, nhưng sau khi AI đánh giá từng tiêu chí E, S, G cụ thể lại thấy E=False, S=False và G=False (tức là không thuộc phân loại nào trong 3 trụ cột CỤ THỂ) -> Nó cũng ném bài đó vào sọt rác (In log -> Tier B: E/S/G all false (skip)).
+Kết quả cuối cùng
+Chỉ những bài báo nằm trong từ điển (Vượt Ải 1) VÀ được sự khẳng định chuyên môn bằng lập luận trích dẫn từ AI (Vượt Ải 2) mới tiếp tục được giữ lại. Chúng được lưu thành các file JSON trong folder silver/3 để chuẩn bị cho giai đoạn chấm điểm mức độ Tẩy xanh (Greenwashing) theo sau. Bạn) theo các bộ quy tắc phía sau

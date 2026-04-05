@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "NCB_2024_ESG_raw.txt",
+    "Total Characters": 72614,
+    "Total Tokens": 10829,
+    "Date Calculated": "2026-04-05 05:56:01"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.014930135081472718,
+    "S_tfidf": 0.0,
+    "G_tfidf": 0.004388151900549343
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.0064394289940073535,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 14,
+    "E Keywords": 11,
+    "S Keywords": 0,
+    "G Keywords": 5
+  }
+}

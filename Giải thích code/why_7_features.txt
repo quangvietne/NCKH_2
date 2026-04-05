@@ -1,0 +1,26 @@
+PHÂN TÍCH: TẠI SAO DÙNG K-MEANS VỚI 7 FEATURES TRONG KHI CHỈ CẦN 2 CÁI (DELTA VÀ GSI) CÓ VẺ LÀ ĐỦ?
+
+Sự thật là: Trên biểu đồ Scatter Plot 2D, mắt người chỉ có thể nhìn thấy 2 trục (Delta Gap và GSI). Nhưng bên trong "não bộ" của K-Means, việc đánh giá dựa trên không gian 7 chiều (7D) mang lại sự chính xác phân loại vượt trội so với 2 chiều. Lý do cụ thể:
+
+1. BẢN CHẤT CỦA CÁC ĐIỂM TỔNG HỢP:
+Delta_Gap và GSI_Raw đều là các "Điểm Số Tổng Hợp" (Aggregated Scores) từ các thành phần con.
+- Delta_Gap = Report_Score_X trừ News_Score_Y_mean.
+- GSI_Raw = (E_tfidf + S_tfidf + G_tfidf) / 3.
+
+Việc chỉ dùng 2 điểm tổng hợp có thể dẫn đến hiện tượng TRÙNG LẶP SỐ LIỆU RẼ NHÁNH XA NHAU (False Equivalence).
+Ví dụ:
+- Ngân hàng A: E=0.9, S=0.0, G=0.0 -> GSI_Raw = 0.3
+- Ngân hàng B: E=0.3, S=0.3, G=0.3 -> GSI_Raw = 0.3
+Nếu chỉ dùng GSI_Raw = 0.3, K-Means (ở dạng 2D) sẽ xếp Ngân hàng A và B nằm cạnh nhau. Nhưng bản chất kinh doanh của A và B hoàn toàn khác nhau (A phát triển chệch hướng, cố tình lạm dụng từ khóa Môi trường E để che đậy S và G). Trong không gian 7D, 3 features [E, S, G] sẽ kéo A và B ra làm 2 cụm khác nhau.
+
+2. TRÁNH GOM CỤM DỰA TRÊN ẢO ẢNH PHÉP TRỪ (DELTA GAP)
+Tương tự như vậy với Delta. Hai ngân hàng có thể có cùng Delta_Gap = 0.2 nhưng:
+- NH thứ nhất: Khen tự thân 0.9, Báo chí khen 0.7 -> Delta = 0.2. (Được báo đài thừa nhận, chỉ nói quá lên một chút).
+- NH thứ hai: Tự thân 0.2, Báo chí là 0.0 -> Delta = 0.2. (Không ai quan tâm, tự le lói).
+=> Nếu chỉ lấy Delta=0.2 để phân cụm, nhóm 1 và nhóm 2 sẽ bị K-Means nhét chung một ổ. Bằng cách giữ lại `Report_Score_X` và `News_Score_Y_mean` riêng rẽ trong không gian 7 chiều, K-Means sẽ hiểu Bank thứ 1 nằm trong cụm "Minh Bạch nhưng PR mạnh", còn Bank thứ 2 là "Ít người biết đến".
+
+3. 7 FEATURES GIÚP TĂNG ĐỘ DÀY (ROBUSTNESS) CHO MACHINE LEARNING
+Trong Machine Learning chuẩn, nếu dữ liệu ít (n = số lượng ngân hàng ở Việt Nam chỉ tầm 30-40 ngân hàng), việc cung cấp thêm các góc nhìn nội tại (Contextual Dimensions) giúp K-Means không bị phụ thuộc quá lố vào 1 điểm Dị biệt (Outliers) của GSI. Việc giữ nguyên 7 đặc trưng giúp phân cụm (Clustering) nhặt ra sự tự nhiên trong "Gu" nói dối của các ngân hàng.
+
+TÓM LẠI:
+Trục đồ thị X-Y (Delta và GSI) chỉ là cách con người (2 con mắt) hình tượng hóa vấn đề để dễ báo cáo. Còn để giao quyền sinh sát cho máy tính phân chia ai Tẩy Xanh - ai Trong Sạch, phải ném cho máy tính không gian 7 chiều gốc rễ. Máy sẽ đo khoảng cách Euclidean trên 7 vector đó rồi gắn nhãn (Cluster=0, 1, 2). Sau khi có nhãn rồi mới in cái nhãn màu đó ngược lại lên tờ giấy 2D. Đo 7D nhưng vẽ 2D mới là tiêu chuẩn định lượng cao nhất.

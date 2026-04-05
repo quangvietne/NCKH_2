@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "NamABank_2023_ESG_raw.txt",
+    "Total Characters": 258039,
+    "Total Tokens": 49004,
+    "Date Calculated": "2026-04-05 08:25:34"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.018582642533178262,
+    "S_tfidf": 0.004684549549069968,
+    "G_tfidf": 0.017898809026877006
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.013722000369708411,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 77,
+    "E Keywords": 34,
+    "S Keywords": 26,
+    "G Keywords": 22
+  }
+}

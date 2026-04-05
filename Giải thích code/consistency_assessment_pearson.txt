@@ -1,0 +1,26 @@
+File `consistency_assessment_pearson.ipynb` là bước kiểm chứng khoa học (Statistical Validation) và phân tích độ lệch (Gap Analysis) trong quy trình nghiên cứu. Mục tiêu chính là đo lường sự chênh lệch giữa "Lời ngân hàng tự nói" và "Lời truyền thông đánh giá".
+
+Dưới đây là các cơ chế cốt lõi của file:
+
+### 1. Thuật toán: Phân tích độ lệch (Gap Analysis - Delta)
+Thay vì chỉ tính tương quan Pearson đơn thuần, file này tập trung vào chỉ số **Dissonance Gap (Delta)** để phát hiện dấu hiệu Greenwashing cho từng ngân hàng cụ thể.
+
+> **Công thức:** Δ_Gap = X - Ȳ
+
+Trong đó:
+* **X (Report Score)**: Điểm cảm xúc trung bình trích xuất từ Báo cáo bền vững (PDF) của ngân hàng.
+* **Ȳ (Mean News Score)**: Điểm cảm xúc trung bình trích xuất từ tất cả các tin tức báo chí về ngân hàng đó.
+
+### 2. Luồng xử lý dữ liệu (Workflow)
+* **Đầu vào (Input)**: Đọc các file kết quả đã chấm điểm từ thư mục `scoring/`.
+    * Lấy điểm `comparative_score` từ các file báo cáo (`scored_*.json`).
+    * Lấy điểm `comparative_score` từ các file tin tức đã qua bộ lọc LLM (`scored_esg_check_llms_*.json`).
+* **Tiến trình**:
+    1. Tổng hợp toàn bộ danh sách điểm số của hai nguồn vào hai mảng dữ liệu riêng biệt.
+    2. Sử dụng thư viện `numpy` (`np.mean`) để tính toán giá trị trung bình đại diện cho mỗi nguồn.
+    3. Thực hiện phép trừ để tìm ra độ lệch **Delta**.
+* **Đầu ra (Output)**: 
+    * Hiển thị bảng so sánh trực quan giữa điểm Báo cáo và điểm Tin tức.
+    * Xuất file kết quả ra định dạng Excel (`*_Gap_Score.xlsx`) nằm ngay trong thư mục `scoring/` để phục vụ vẽ biểu đồ sau này.
+
+File này cung cấp bằng chứng định lượng quan quan trọng nhất để bạn kết luận về mức độ trung thực trong báo cáo ESG của ngân hàng.

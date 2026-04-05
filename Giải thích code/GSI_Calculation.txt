@@ -1,0 +1,31 @@
+File `GSI_Calculation.ipynb` là điểm chạm cuối cùng của toàn bộ hệ thống đánh giá ESG. Nhiệm vụ của file này là tổng hợp, phân tích sâu nội dung bên trong Báo cáo Phát triển Bền vững của trụ sở và đưa ra chỉ số **GSI (Greenwashing Severity Index - Tỷ trọng Tẩy xanh)** chung cuộc.
+
+Dưới đây là cơ chế hoạt động của thuật toán tính toán GSI:
+
+### 1. Thuật toán lõi: Phân tích TF-IDF theo 3 trụ cột E, S, G
+Thay vì sử dụng điểm số Count (đếm từ) thông thường như các công cụ trước, file áp dụng thuật toán **TF-IDF** (Term Frequency - Inverse Document Frequency). 
+* **TF (Tần suất xuất hiện):** Đo lường từ khóa đó được dùng bao nhiêu lần.
+* **IDF (Tần suất nghịch đảo):** Phạt/giảm điểm các từ khóa sáo rỗng xuất hiện quá nhiều ở mọi nơi ("và", "của", "phát triển"), chỉ giữ lại điểm cao cho các từ khóa chuyên ngành, thực chất.
+
+Kết hợp lại, thuật toán này sẽ đánh bật lên được các trọng tâm thực sự (Focus Scores) của Báo cáo.
+
+### 2. Luồng xử lý dữ liệu (Workflow)
+* **Đầu vào (Input):**
+    1. Đọc file text thô (raw text) đã được trích xuất từ file PDF của báo cáo ở Thread 1.
+    2. Tải 3 nhánh từ điển vựng E (Môi trường), S (Xã hội), G (Quản trị) chuyên biệt từ các file Excel (`E.xlsx`, `S.xlsx`, `G.xlsx`).
+* **Tiến trình:**
+    1. Tập trung xử lý NLP (Tokenization, bỏ Stopwords) cho file Báo cáo bằng thư viện tiếng việt chuyên mục (`underthesea` hoặc `pyvi`).
+    2. Sử dụng `TfidfVectorizer` từ `scikit-learn` để tính điểm TF-IDF cho từng từ khóa khớp với 3 bộ từ điển ESG bên trong văn bản.
+    3. Tính trung bình hoặc tổng hợp TF-IDF của từng nhóm để lấy 3 điểm thành phần: `E_tfidf`, `S_tfidf`, và `G_tfidf`.
+* **Đầu ra (Output):** Xuất bảng điểm chi tiết E, S, G của Báo cáo và tính chỉ số GSI tổng.
+
+### 3. Công thức tính GSI Tổng
+Chỉ số Tẩy xanh chung cuộc được tính thông qua việc kết hợp các Vector điểm thành phần:
+
+> **Công thức:** GSI = (ω_E × E_tfidf) + (ω_S × S_tfidf) + (ω_G × G_tfidf)
+
+Trong đó:
+* `ω_E`, `ω_S`, `ω_G`: Là các trọng số (Weight) phân bổ cho Môi trường, Xã hội, Quản trị (Có thể được set thủ công bằng nhau 33% hoặc dựa vào phân tích rủi ro của từng ngân hàng).
+* Báo cáo nào có từ khóa ESG càng mang tính "mỹ miều" nhưng tần suất không hợp lý hoặc tập trung quá lố vào một mảng (ví dụ mảng Xã hội) để lấp liếm sự yếu kém của mảng Môi trường, thuật toán TF-IDF sẽ làm lộ ra sự bất thường đó thông qua chỉ số GSI lớn.
+
+Bạn có thể kết hợp chỉ số GSI tuyệt đối này với độ lệch Delta ở file trước để hoàn thiện toàn bộ nghiên cứu đánh giá sự cố tình "Tẩy xanh" của Ngân hàng.

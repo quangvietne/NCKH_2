@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "SeABank_2023_ESG_raw.txt",
+    "Total Characters": 112957,
+    "Total Tokens": 20966,
+    "Date Calculated": "2026-04-05 18:32:06"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.009194541227950577,
+    "S_tfidf": 0.0032552873152025593,
+    "G_tfidf": 0.013806973479157882
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.00875226734077034,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 34,
+    "E Keywords": 13,
+    "S Keywords": 9,
+    "G Keywords": 12
+  }
+}

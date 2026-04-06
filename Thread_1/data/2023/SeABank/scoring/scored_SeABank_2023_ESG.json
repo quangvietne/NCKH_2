@@ -1,0 +1,193 @@
+{
+    "reports": [
+        {
+            "report_name": "SeABank_2023_ESG.pdf",
+            "text_file_path": "E:\\NCKH_2-master\\ESG_reporting\\extracted_texts\\SeABank_2023_ESG_raw.txt",
+            "total_tokens": 18581,
+            "total_score": 180,
+            "comparative_score": 0.009687314999192724,
+            "esg_matched_terms": {
+                "xanh": {
+                    "frequency": 39,
+                    "weight": -1,
+                    "subtotal": -39
+                },
+                "tái_tạo": {
+                    "frequency": 1,
+                    "weight": 3,
+                    "subtotal": 3
+                },
+                "có trách_nhiệm": {
+                    "frequency": 7,
+                    "weight": 1,
+                    "subtotal": 7
+                },
+                "bền_vững": {
+                    "frequency": 37,
+                    "weight": 1,
+                    "subtotal": 37
+                },
+                "đạo_đức": {
+                    "frequency": 4,
+                    "weight": 1,
+                    "subtotal": 4
+                },
+                "trách_nhiệm": {
+                    "frequency": 13,
+                    "weight": 1,
+                    "subtotal": 13
+                },
+                "công_bằng": {
+                    "frequency": 5,
+                    "weight": 1,
+                    "subtotal": 5
+                },
+                "bình_đẳng": {
+                    "frequency": 5,
+                    "weight": 1,
+                    "subtotal": 5
+                },
+                "sinh_học": {
+                    "frequency": 11,
+                    "weight": -1,
+                    "subtotal": -11
+                },
+                "sinh_thái": {
+                    "frequency": 1,
+                    "weight": -1,
+                    "subtotal": -1
+                },
+                "lãng_phí": {
+                    "frequency": 1,
+                    "weight": -1,
+                    "subtotal": -1
+                },
+                "ô_nhiễm": {
+                    "frequency": 2,
+                    "weight": -3,
+                    "subtotal": -6
+                },
+                "tính bền_vững": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "duy_trì": {
+                    "frequency": 8,
+                    "weight": 1,
+                    "subtotal": 8
+                },
+                "minh_bạch": {
+                    "frequency": 17,
+                    "weight": 2,
+                    "subtotal": 34
+                },
+                "khả_năng kiểm_chứng": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "đã được xác_nhận": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "chính_xác": {
+                    "frequency": 4,
+                    "weight": 2,
+                    "subtotal": 8
+                },
+                "bảo_đảm": {
+                    "frequency": 3,
+                    "weight": 2,
+                    "subtotal": 6
+                },
+                "đảm_bảo": {
+                    "frequency": 21,
+                    "weight": 2,
+                    "subtotal": 42
+                },
+                "tuân_thủ pháp_luật": {
+                    "frequency": 2,
+                    "weight": 2,
+                    "subtotal": 4
+                },
+                "vi_phạm_pháp_luật": {
+                    "frequency": 1,
+                    "weight": -3,
+                    "subtotal": -3
+                },
+                "niềm tin": {
+                    "frequency": 1,
+                    "weight": 1,
+                    "subtotal": 1
+                },
+                "tái_chế": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "năng_lượng tái_tạo": {
+                    "frequency": 1,
+                    "weight": 3,
+                    "subtotal": 3
+                },
+                "năng_lượng sạch": {
+                    "frequency": 1,
+                    "weight": -1,
+                    "subtotal": -1
+                },
+                "đa_dạng sinh_học": {
+                    "frequency": 10,
+                    "weight": 1,
+                    "subtotal": 10
+                },
+                "tái sử_dụng": {
+                    "frequency": 1,
+                    "weight": 2,
+                    "subtotal": 2
+                },
+                "giảm_thiểu": {
+                    "frequency": 8,
+                    "weight": 1,
+                    "subtotal": 8
+                },
+                "công_trình xanh": {
+                    "frequency": 2,
+                    "weight": -1,
+                    "subtotal": -2
+                },
+                "kinh_tế xanh": {
+                    "frequency": 3,
+                    "weight": 3,
+                    "subtotal": 9
+                },
+                "tài_chính xanh": {
+                    "frequency": 5,
+                    "weight": 2,
+                    "subtotal": 10
+                },
+                "gian_lận": {
+                    "frequency": 3,
+                    "weight": -3,
+                    "subtotal": -9
+                },
+                "cộng_đồng": {
+                    "frequency": 38,
+                    "weight": 1,
+                    "subtotal": 38
+                },
+                "lỗi": {
+                    "frequency": 1,
+                    "weight": -2,
+                    "subtotal": -2
+                },
+                "vi_phạm": {
+                    "frequency": 3,
+                    "weight": -3,
+                    "subtotal": -9
+                }
+            }
+        }
+    ]
+}

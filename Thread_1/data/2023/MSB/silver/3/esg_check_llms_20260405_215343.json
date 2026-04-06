@@ -1,0 +1,42 @@
+{
+  "bank": "MSB",
+  "year": "2023",
+  "generated_at": "2026-04-05T21:53:43",
+  "model": "openai/gpt-4o-mini",
+  "dictionary": "e:\\NCKH_2-master\\ESG_Dictionary\\ESG.xlsx",
+  "definition": "e:\\NCKH_2-master\\Thread_1\\Definition_ESG.txt",
+  "stage_in": "silver/2",
+  "stage_out": "silver/3",
+  "items": [
+    {
+      "link": "https://cafef.vn/con-trai-thanh-vien-hdqt-msb-muon-ban-luong-lon-co-phieu-188230728141743984.chn",
+      "source": "cafef.vn",
+      "title": "Con trai thành viên HĐQT MSB muốn bán lượng lớn cổ phiếu - CafeF",
+      "content": "Con trai thành viên HĐQT MSB muốn bán lượng lớn cổ phiếu\nGiao dịch được thực hiện theo phương thức thỏa thuận và khớp lệnh, trong thời gian từ 1/8 đến 30/8\n- 24-07-2023Cổ phiếu ngân hàng hấp dẫn vốn ngoại\n- 21-07-2023Cổ phiếu ngân hàng “khởi nghĩa” cuối phiên, sắc xanh áp đảo\n- 19-07-2023\"Sếp\" VIB muốn mua vào 25 triệu cổ phiếu, trị giá hơn 500 tỷ đồng\nNgân hàng TMCP Hàng hải Việt Nam (MSB) vừa công bố báo cáo giao dịch cổ phiếu của người liên quan với người nội bộ.\nTheo đó, Phạm Lê Việt Anh - con trai bà Lê Thị Liên, Thành viên HĐQT MSB - đăng ký bán hơn 2,1 triệu cổ phiếu MSB nhằm mục đích đầu tư tài chính. Giao dịch được thực hiện theo phương thức thỏa thuận và khớp lệnh, trong thời gian từ 1/8 đến 30/8.\nNếu thành công, con trai bà Liên sẽ giảm lượng cổ phiếu MSB sở hữu từ hơn 4,1 triệu cổ phiếu (tỷ lệ 0,206%) xuống còn 2 triệu cổ phiếu (0,1%). Trong khi bà Liên hiện đang nắm giữ 636.961 cổ phiếu MSB, tương đương 0,032% vốn điều lệ ngân hàng.\nTrên thị trường chứng khoán, thị giá cổ phiếu MSB hiện giao dịch ở mức 13.500 đồng/cp. Ước tính theo mức giá này, ông Việt Anh có thể thu về khoảng 28 tỷ đồng nếu bán thành công lượng cổ phiếu đăng ký.\nVề MSB, lợi nhuận hợp nhất trước thuế 6 tháng của ngân hàng đạt 3.548 tỷ đồng, tăng nhẹ 6% so với cùng kỳ năm trước và tương đương 56% kế hoạch năm.\nTại ngày 30/6/2023, tổng tài sản của MSB đạt hơn 237.800 tỷ đồng, tăng 11,8% so với thời điểm 31/12/2022. Tổng cho vay khách hàng lũy kế 6 tháng qua đạt gần 136.600 tỷ đồng, tăng trưởng đạt 13,2% so với đầu năm, cao hơn mức trung bình toàn ngành, với sự đóng góp lớn từ các phân khúc chiến lược như khách hàng cá nhân và khách hàng doanh nghiệp vừa và nhỏ.\nTiền gửi khách hàng tháng ghi nhận gần 126.300 tỷ đồng, tăng 7,8% so với cuối năm 2022, trong đó tiền gửi tiết kiệm và tiền gửi ký quỹ tăng ấn tượt với lần lượt 24% và 30%.\nVề các chỉ số an toàn hoạt động, tỷ lệ nợ xấu (NPL) riêng lẻ tại 30/6/2023 của MSB được kiểm soát ở mức 1,73%.\nNhịp sống Thị trường\n- Chứng khoán rung lắc, liệu còn cơ hội nào cho cổ phiếu ngân hàng những tháng cuối năm?\n- Những ngân hàng nào nắm giữ trái phiếu Novaland?\n- Cập nhật bảng xếp hạng 27 ngân hàng theo mô hình CAMEL\n- \"Dọn đường\" đón nhà đầu tư chiến lược nước ngoài, VPBank nới room ngoại lên 30%\n- MSB gần tăng trần, khối ngoại gom mạnh TPB phiên 5/9",
+      "E": false,
+      "S": false,
+      "G": true,
+      "context_esg": "Bài viết đề cập đến giao dịch cổ phiếu của con trai thành viên HĐQT MSB, cho thấy sự liên quan đến quản trị doanh nghiệp.",
+      "evidence_quotes": [
+        "Con trai bà Lê Thị Liên, Thành viên HĐQT MSB - đăng ký bán hơn 2,1 triệu cổ phiếu MSB nhằm mục đích đầu tư tài chính.",
+        "Ngân hàng TMCP Hàng hải Việt Nam (MSB) vừa công bố báo cáo giao dịch cổ phiếu của người liên quan với người nội bộ."
+      ],
+      "confidence": 0.0
+    },
+    {
+      "link": "https://cafef.vn/msb-ra-mat-diem-giao-dich-tu-dong-mdigi-bank-188231023170829094.chn",
+      "source": "cafef.vn",
+      "title": "MSB ra mắt điểm giao dịch tự động M.Digi Bank - CafeF",
+      "content": "MSB ra mắt điểm giao dịch tự động M.Digi Bank\nNgân hàng TMCP Hàng Hải Việt Nam (MSB) vừa chính thức đưa vào hoạt động điểm giao dịch tự động M.Digi Bank. Đây là mô hình hiện đại cho phép khách hàng có thể thực hiện nhiều loại giao dịch như nộp hoặc rút tiền từ tài khoản,.. đồng thời tương tác với thiết bị như đang giao dịch thực tế với nhân viên ngân hàng.\nĐiểm giao dịch M.Digi Bank của MSB được phục vụ 24/7 với không gian hiện đại, chuyên nghiệp với hệ thống máy giao dịch tự động STM (Smart Teller Machine). Đây là một trong những hệ thống máy giao dịch tự động hiện đại nhất tại Việt Nam với giao diện đơn giản, thân thiện, đồng thời tích hợp nhiều công nghệ hiện đại giúp khách hàng dễ dàng chủ động thao tác, tiết kiệm được thời gian giao dịch thay vì thực hiện tại quầy như trước đây và hoàn toàn yên tâm về bảo mật.\nNgoài thực hiện các chức năng như một máy ATM thông thường, khi đến với điểm giao dịch M.Digi Bank, khách hàng có thể nộp tiền mặt trực tiếp vào tài khoản ngân hàng tại máy STM qua việc lựa chọn tính năng giao dịch nộp tiền trên màn hình chính, nhập số tài khoản và nội dung giao dịch, sau đó đưa tiền vào máy và xác nhận số tiền, ngay lập tức số tiền được ghi nhận vào tài khoản.\nBên cạnh tính năng nộp tiền, máy STM cho phép người dùng rút tiền không cần sử dụng thẻ vật lý nhờ tính năng rút tiền bằng mã. Các thao tác được thực hiện dễ dàng, nhanh chóng nhưng vẫn đảm bảo tính bảo mật tuyệt đối, khách hàng sẽ login vào ứng dụng MSB mBank và tự tạo mã riêng để thực hiện rút tiền. Song song với STM, MSB cũng đã triển khai tính năng rút tiền không dùng thẻ toàn bộ 263 máy ATM trên toàn quốc, áp dụng đối với khách hàng có tài khoản liên kết với thẻ ghi nợ tại ngân hàng MSB. Khách hàng cũng có thể chia sẻ mã rút tiền cho người thân thông qua tính năng rút tiền không dùng thẻ bằng cách nhập số điện thoại của người thân trong việc tạo mã trên ứng dụng MSB mBank.\nBên cạnh hai tính năng nộp và rút tiền đã được hoàn thiện và đang hoạt động, MSB sẽ nâng cấp và triển khai các tính năng khác trên STM như mở tài khoản, nâng cấp tài khoản e-KYC, thay đổi thông tin khách hàng, tra soát, mở sổ tiết kiệm… thông qua việc xác thực danh tính bằng CCCD và số điện thoại.\nThiết kế mặt ngoài của M.Digi Bank (Ảnh: MSB)\nHiện nay, máy STM đã được triển khai tại các thành phố lớn như Hà Nội, TP. Hồ Chí Minh, Hải Phòng… để đáp ứng tối đa các nhu cầu giao dịch tài chính của khách hàng. Với các khách hàng lần đầu trải nghiệm điểm giao dịch tự động M.Digi Bank, điều phối viên MSB sẽ trực tiếp hướng dẫn và tư vấn sử dụng.\nHòa cùng xu thế chuyển đổi số, năm 2024, MSB tiếp tục mở rộng các điểm giao dịch M.Digi Bank tại Hà Nội, Hồ Chí Minh và các tỉnh/thành phố tại Việt Nam sẽ mang đến các dịch vụ tiện ích và không ngừng gia tăng trải nghiệm dịch vụ cho khách hàng.\nThông tin chi tiết về điểm giao dịch của MSB, khách hàng vui lòng xem tại đây hoặc hoặc liên hệ hotline 19006083.",
+      "E": false,
+      "S": true,
+      "G": false,
+      "context_esg": "Bài viết đề cập đến việc MSB ra mắt điểm giao dịch tự động M.Digi Bank, cho phép khách hàng thực hiện giao dịch một cách nhanh chóng và bảo mật, điều này thể hiện sự chú trọng đến trải nghiệm và bảo mật của khách hàng.",
+      "evidence_quotes": [
+        "Các thao tác được thực hiện dễ dàng, nhanh chóng nhưng vẫn đảm bảo tính bảo mật tuyệt đối.",
+        "khách hàng sẽ login vào ứng dụng MSB mBank và tự tạo mã riêng để thực hiện rút tiền."
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

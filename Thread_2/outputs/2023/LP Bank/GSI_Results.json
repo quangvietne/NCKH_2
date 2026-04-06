@@ -1,0 +1,23 @@
+{
+  "Report Summary": {
+    "Text File": "LP Bank_2023_ESG_raw.txt",
+    "Total Characters": 89175,
+    "Total Tokens": 11247,
+    "Date Calculated": "2026-04-05 19:34:20"
+  },
+  "ESG Scores": {
+    "E_tfidf": 0.015781800491547544,
+    "S_tfidf": 0.004384374179805892,
+    "G_tfidf": 0.009912396208119473
+  },
+  "GSI Score": {
+    "GSI_Raw": 0.010026190293157636,
+    "Risk Level": "Pending Clustering"
+  },
+  "Keywords Found": {
+    "Total": 20,
+    "E Keywords": 9,
+    "S Keywords": 5,
+    "G Keywords": 8
+  }
+}
